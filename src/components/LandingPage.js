@@ -56,66 +56,9 @@ const faqs = [
   { q: 'Do you offer in‑person or virtual sessions?', a: 'Currently virtual by secure video. Limited in‑person availability may be offered seasonally.' },
 ];
 
-// Booking Modal Component
-function BookingModal({ show, onClose }) {
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: '', email: '', date: '', time: '' });
-  const times = Array.from({ length: 8 }, (_, i) => `${9 + i}:00`);
-
-  const handleChange = e => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-  const handleSubmit = e => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-  useEffect(() => {
-    if (!show) setSubmitted(false);
-  }, [show]);
-  if (!show) return null;
-  return (
-    <div style={{ position: 'fixed', top: 0, left: 0, zIndex: 1050, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.3)' }} onClick={onClose}>
-      <div style={{ maxWidth: 400, margin: '8vh auto', background: '#fff', borderRadius: 16, boxShadow: '0 4px 24px rgba(0,0,0,0.12)', padding: 32, position: 'relative' }} onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} style={{ position: 'absolute', top: 12, right: 16, background: 'none', border: 'none', fontSize: 24, color: '#a27ba6', cursor: 'pointer' }}>&times;</button>
-        <h4 style={{ color: '#a27ba6', fontWeight: 600 }}>Book Appointment</h4>
-        {submitted ? (
-          <div className="alert alert-success mt-3">Thank you! Your appointment request has been received.</div>
-        ) : (
-          <form onSubmit={handleSubmit} className="mt-3">
-            <div className="mb-3">
-              <label className="form-label">Name</label>
-              <input type="text" className="form-control" name="name" value={form.name} onChange={handleChange} required />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Email</label>
-              <input type="email" className="form-control" name="email" value={form.email} onChange={handleChange} required />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Date</label>
-              <input type="date" className="form-control" name="date" value={form.date} onChange={handleChange} required />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Time</label>
-              <select className="form-select" name="time" value={form.time} onChange={handleChange} required>
-                <option value="">Select a time</option>
-                {times.map(t => <option key={t} value={t}>{t} - {parseInt(t) + 1}:00</option>)}
-              </select>
-            </div>
-            <button type="submit" className="btn btn-primary w-100">Book</button>
-          </form>
-        )}
-      </div>
-    </div>
-  );
-}
-
 const LandingPage = () => {
-  const [showBooking, setShowBooking] = useState(false);
-  const openBooking = e => { e.preventDefault(); setShowBooking(true); };
-  const closeBooking = () => setShowBooking(false);
   return (
     <div style={{ background: '#f8f6f0', fontFamily: 'Segoe UI, Arial, sans-serif' }}>
-      <BookingModal show={showBooking} onClose={closeBooking} />
       {/* Hero Section */}
       <FadeInSection>
         <section className={styles.hero}>
