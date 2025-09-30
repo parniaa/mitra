@@ -68,7 +68,7 @@ const LandingPage = () => {
           <p className={styles.heroSubtitle}>
             I'm Mitra Behboudi, a Qualifying Registered psychotherapist. I provide warm, practical support for anxiety, relationships, and life transitions—so you can gain clarity, confidence, and calm.
           </p>
-          <a href="#" onClick={(e)=>{e.preventDefault(); if(window.Calendly){ window.Calendly.initPopupWidget({url: CALENDLY_URL}); } else { window.open(CALENDLY_URL, '_blank'); } }} className={`btn btn-primary btn-lg ${styles.heroBtn}`}>Book Free Consultation</a>
+          <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className={`btn btn-primary btn-lg ${styles.heroBtn}`}>Book Free Consultation</a>
         </section>
       </FadeInSection>
 
@@ -201,7 +201,7 @@ const LandingPage = () => {
                 <li><strong>Email:</strong> <a href="mailto:contact@mitrabehboudi.com" style={{ color: '#6a7ba2' }}>contact@mitrabehboudi.com</a></li>
                 <li><strong>Phone:</strong> <a href="tel:0000000000" style={{ color: '#6a7ba2' }}>000-000-0000</a></li>
               </ul>
-              <a href="#" onClick={(e)=>{e.preventDefault(); if(window.Calendly){ window.Calendly.initPopupWidget({url: CALENDLY_URL}); } else { window.open(CALENDLY_URL, '_blank'); } }} className="btn btn-primary mt-3" style={{ background: '#a7c7e7', border: 'none' }}>Book Now</a>
+              <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary mt-3" style={{ background: '#a7c7e7', border: 'none' }}>Book Now</a>
             </div>
             <div className="col-md-6 text-center">
               <FallbackImage src="https://www.svgrepo.com/show/303253/hand.svg" alt="Contact" style={{ maxWidth: 180 }} />
