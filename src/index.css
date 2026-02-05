@@ -14,7 +14,7 @@ code {
 
 .navbar {
   background: linear-gradient(90deg, #f6d6e1 0%, #d6eaf6 100%) !important;
-  box-shadow: 0 2px 8px rgba(200, 200, 200, 0.1);
+  box-shadow: 0 4px 8px rgba(200, 200, 200, 0.1);
 }
 
 /* Ensure navbar inner container doesn't get the global white background */
