@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 
-const DEFAULT_FALLBACK_SRC = process.env.PUBLIC_URL + '/logo192.png';
+const DEFAULT_FALLBACK_SRC = process.env.PUBLIC_URL + '/IMG3063.png';
 
 function FallbackImage({ src, alt, fallbackSrc, onError, loading = 'lazy', decoding = 'async', ...restProps }) {
   const resolvedFallback = useMemo(() => fallbackSrc || DEFAULT_FALLBACK_SRC, [fallbackSrc]);
