@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import FallbackImage from './FallbackImage';
+import Header from './Header';
 import { CALENDLY_URL } from '../config';
 import styles from './LandingPage.module.css';
 
@@ -60,6 +61,7 @@ const faqs = [
 const LandingPage = () => {
   return (
     <div style={{ background: '#f8f6f0', fontFamily: 'Segoe UI, Arial, sans-serif' }}>
+      <Header />
       {/* Hero Section */}
       <FadeInSection>
         <section className={styles.hero}>
