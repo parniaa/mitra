@@ -67,16 +67,14 @@ const LandingPage = () => {
         <section
           className={styles.hero}
           style={{
-            backgroundImage: "url('/backg.png')",
+            backgroundColor: 'teal',
             backgroundPosition: 'center top',
-            backgroundRepeat: 'repeat',
-            backgroundSize: '200px 200px',
           }}
         >
           <FallbackImage src="/IMG3063.png" alt="Lotus" style={{ width: 280, marginBottom: 16, borderRadius: 100 }} />
-          <h1 className={styles.heroTitle}>Compassionate Psychotherapy to Help You Feel Like Yourself Again</h1>
+          <h1 className={styles.heroTitle}>Compassionate Psychotherapy and Art Therapy for Healing and Self-Rediscovery</h1>
           <p className={styles.heroSubtitle}>
-            I'm Mitra Behboudi, a Qualifying Registered psychotherapist. I provide warm, practical support for anxiety, relationships, and life transitions—so you can gain clarity, confidence, and calm.
+            I'm Mitra Behboudi, a Registered Psychotherapist(Qualifying) and a Registered Art Therapist, offering warm, practical support for anxiety, relationships, and life transitions—so you can reconnect with yourself and move forward with clarity, confidence, and calm.
           </p>
           <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className={`btn btn-primary btn-lg ${styles.heroBtn}`}>Book Free Consultation</a>
         </section>
@@ -94,7 +92,7 @@ const LandingPage = () => {
               <p>Therapy should feel safe, human, and truly helpful. I blend evidence‑based approaches with a down‑to‑earth style, helping you understand patterns, manage tough emotions, and make gentle, sustainable changes.</p>
             </div>
             <div className="col-md-6 text-center">
-              <FallbackImage src="https://www.svgrepo.com/show/303250/mountain.svg" alt="Mountain" style={{ maxWidth: 200 }} />
+              <FallbackImage src="/IMG3063.png" alt="Mountain" style={{ maxWidth: 500 }} />
             </div>
           </div>
         </section>
@@ -106,11 +104,10 @@ const LandingPage = () => {
           <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Services</h3>
         </div>
         <section className={`container ${styles.section}`}>
-          <h2 className={styles.sectionTitle}>Services</h2>
           <div className={styles.servicesGrid}>
             {therapies.map((t, i) => (
               <div className={styles.serviceCard} key={i}>
-                <FallbackImage src="https://www.svgrepo.com/show/303252/flower.svg" alt="Therapy" className={styles.serviceIcon} />
+                <FallbackImage src="/k.webp" alt="Therapy" className={styles.serviceIcon} />
                 <h5 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>{t.title}</h5>
                 <p style={{ color: '#4a4a4a' }}>{t.desc}</p>
               </div>
@@ -122,10 +119,9 @@ const LandingPage = () => {
       {/* Issues Treated Section */}
       <FadeInSection>
         <div id="issues" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Issues</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Issues We Help With</h3>
         </div>
         <section className={`container ${styles.section}`}>
-          <h2 className={styles.sectionTitle}>Issues We Help With</h2>
           <div className={styles.issuesGrid}>
             {issues.map((issue, i) => (
               <div className={styles.issueTile} key={i}>{issue}</div>
@@ -135,12 +131,11 @@ const LandingPage = () => {
       </FadeInSection>
 
       {/* Team Section */}
-      <FadeInSection>
-        <div id="team" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Team</h3>
+      {/* <FadeInSection>
+        <div id="team" style={{textAlign: 'center'}}>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Our Team</h3>
         </div>
         <section className={`container ${styles.section}`}>
-          <h2 className={styles.sectionTitle}>Our Team</h2>
           <div className={styles.teamGrid}>
             {team.map((member, i) => (
               <div className={styles.teamCard} key={i}>
@@ -151,7 +146,7 @@ const LandingPage = () => {
             ))}
           </div>
         </section>
-      </FadeInSection>
+      </FadeInSection> */}
 
       {/* Testimonials Section */}
       <FadeInSection>
@@ -159,7 +154,6 @@ const LandingPage = () => {
           <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Testimonials</h3>
         </div>
         <section className={`container ${styles.section}`}>
-          <h2 className={styles.sectionTitle}>Testimonials</h2>
           <div className={styles.testimonialsGrid}>
             {testimonials.map((t, i) => (
               <div className={styles.testimonialCard} key={i}>
@@ -176,10 +170,9 @@ const LandingPage = () => {
       {/* FAQ Section */}
       <FadeInSection>
         <div id="faq" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>FAQ</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Frequently Asked Questions</h3>
         </div>
         <section className={`container ${styles.section}`}>
-          <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
           <div className={`accordion ${styles.faqAccordion}`} id="faqAccordion">
             {faqs.map((faq, i) => (
               <div className="accordion-item" key={i}>
@@ -208,13 +201,13 @@ const LandingPage = () => {
               <h2 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>Ready to start your journey?</h2>
               <p>Book a free consultation or reach out with your questions. We're here to help you find balance and strength.</p>
               <ul className="list-unstyled">
-                <li><strong>Email:</strong> <a href="mailto:contact@mitrabehboudi.com" style={{ color: 'var(--color-accent)' }}>contact@mitrabehboudi.com</a></li>
-                <li><strong>Phone:</strong> <a href="tel:0000000000" style={{ color: 'var(--color-accent)' }}>000-000-0000</a></li>
+                <li><strong>Email:</strong> <a href="mailto:mitra.be@gmail.com" style={{ color: 'var(--color-accent)' }}>mitra.be@gmail.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:647-777-7777" style={{ color: 'var(--color-accent)' }}>647-777-7777</a></li>
               </ul>
               <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary mt-3">Book Now</a>
             </div>
             <div className="col-md-6 text-center">
-              <FallbackImage src="https://www.svgrepo.com/show/303253/hand.svg" alt="Contact" style={{ maxWidth: 180 }} />
+              <FallbackImage src="/mb.png" alt="Contact" style={{ maxWidth: 180 }} />
             </div>
           </div>
         </section>
@@ -222,7 +215,7 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <FallbackImage src="https://www.svgrepo.com/show/303251/lotus-flower.svg" alt="Logo" style={{ width: 40, marginBottom: 8 }} />
+        <FallbackImage src="/mb.png" alt="Logo" style={{ width: 40, marginBottom: 8 }} />
         <div>© 2024 Mitra Behboudi Psychotherapy. All rights reserved.</div>
         <div style={{ fontSize: '0.9rem' }}>Privacy Policy | Terms of Use</div>
       </footer>
