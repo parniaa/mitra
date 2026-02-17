@@ -60,12 +60,20 @@ const faqs = [
 
 const LandingPage = () => {
   return (
-    <div style={{ background: '#f8f6f0', fontFamily: 'Segoe UI, Arial, sans-serif' }}>
+    <div style={{ background: 'var(--color-bg-page)', fontFamily: 'Segoe UI, Arial, sans-serif' }}>
       <Header />
       {/* Hero Section */}
       <FadeInSection>
-        <section className={styles.hero}>
-          <FallbackImage src="https://www.svgrepo.com/show/303251/lotus-flower.svg" alt="Lotus" style={{ width: 80, marginBottom: 16 }} />
+        <section
+          className={styles.hero}
+          style={{
+            backgroundImage: "url('/backg.png')",
+            backgroundPosition: 'center top',
+            backgroundRepeat: 'repeat',
+            backgroundSize: '200px 200px',
+          }}
+        >
+          <FallbackImage src="/IMG3063.png" alt="Lotus" style={{ width: 280, marginBottom: 16, borderRadius: 100 }} />
           <h1 className={styles.heroTitle}>Compassionate Psychotherapy to Help You Feel Like Yourself Again</h1>
           <p className={styles.heroSubtitle}>
             I'm Mitra Behboudi, a Qualifying Registered psychotherapist. I provide warm, practical support for anxiety, relationships, and life transitions—so you can gain clarity, confidence, and calm.
@@ -77,7 +85,7 @@ const LandingPage = () => {
       {/* About/Values Section */}
       <FadeInSection>
         <div id="about" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: '#a27ba6', letterSpacing: 2, fontWeight: 700}}>About</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>About</h3>
         </div>
         <section className={`container ${styles.section}`}>
           <div className="row align-items-center">
@@ -95,7 +103,7 @@ const LandingPage = () => {
       {/* Therapies/Services Section */}
       <FadeInSection>
         <div id="services" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: '#a27ba6', letterSpacing: 2, fontWeight: 700}}>Services</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Services</h3>
         </div>
         <section className={`container ${styles.section}`}>
           <h2 className={styles.sectionTitle}>Services</h2>
@@ -103,7 +111,7 @@ const LandingPage = () => {
             {therapies.map((t, i) => (
               <div className={styles.serviceCard} key={i}>
                 <FallbackImage src="https://www.svgrepo.com/show/303252/flower.svg" alt="Therapy" className={styles.serviceIcon} />
-                <h5 style={{ color: '#6a7ba2', fontWeight: 600 }}>{t.title}</h5>
+                <h5 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>{t.title}</h5>
                 <p style={{ color: '#4a4a4a' }}>{t.desc}</p>
               </div>
             ))}
@@ -114,7 +122,7 @@ const LandingPage = () => {
       {/* Issues Treated Section */}
       <FadeInSection>
         <div id="issues" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: '#a27ba6', letterSpacing: 2, fontWeight: 700}}>Issues</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Issues</h3>
         </div>
         <section className={`container ${styles.section}`}>
           <h2 className={styles.sectionTitle}>Issues We Help With</h2>
@@ -129,7 +137,7 @@ const LandingPage = () => {
       {/* Team Section */}
       <FadeInSection>
         <div id="team" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: '#a27ba6', letterSpacing: 2, fontWeight: 700}}>Team</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Team</h3>
         </div>
         <section className={`container ${styles.section}`}>
           <h2 className={styles.sectionTitle}>Our Team</h2>
@@ -137,8 +145,8 @@ const LandingPage = () => {
             {team.map((member, i) => (
               <div className={styles.teamCard} key={i}>
                 <FallbackImage src={member.img} alt={member.name} className={styles.teamImg} />
-                <h5 style={{ color: '#6a7ba2', fontWeight: 600 }}>{member.name}</h5>
-                <p style={{ color: '#a27ba6' }}>{member.title}</p>
+                <h5 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>{member.name}</h5>
+                <p style={{ color: 'var(--color-accent)' }}>{member.title}</p>
               </div>
             ))}
           </div>
@@ -148,7 +156,7 @@ const LandingPage = () => {
       {/* Testimonials Section */}
       <FadeInSection>
         <div id="testimonials" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: '#a27ba6', letterSpacing: 2, fontWeight: 700}}>Testimonials</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Testimonials</h3>
         </div>
         <section className={`container ${styles.section}`}>
           <h2 className={styles.sectionTitle}>Testimonials</h2>
@@ -156,7 +164,7 @@ const LandingPage = () => {
             {testimonials.map((t, i) => (
               <div className={styles.testimonialCard} key={i}>
                 <blockquote className="blockquote mb-0">
-                  <p style={{ color: '#6a7ba2' }}>&ldquo;{t.text}&rdquo;</p>
+                  <p style={{ color: 'var(--color-text-main)' }}>&ldquo;{t.text}&rdquo;</p>
                   <footer className="blockquote-footer">{t.author}</footer>
                 </blockquote>
               </div>
@@ -168,7 +176,7 @@ const LandingPage = () => {
       {/* FAQ Section */}
       <FadeInSection>
         <div id="faq" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: '#a27ba6', letterSpacing: 2, fontWeight: 700}}>FAQ</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>FAQ</h3>
         </div>
         <section className={`container ${styles.section}`}>
           <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
@@ -192,18 +200,18 @@ const LandingPage = () => {
       {/* Contact/Call to Action Section */}
       <FadeInSection>
         <div id="contact" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: '#a27ba6', letterSpacing: 2, fontWeight: 700}}>Contact</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Contact</h3>
         </div>
         <section className={`container ${styles.contactSection}`} id="contact">
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
-              <h2 style={{ color: '#a27ba6', fontWeight: 600 }}>Ready to start your journey?</h2>
+              <h2 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>Ready to start your journey?</h2>
               <p>Book a free consultation or reach out with your questions. We're here to help you find balance and strength.</p>
               <ul className="list-unstyled">
-                <li><strong>Email:</strong> <a href="mailto:contact@mitrabehboudi.com" style={{ color: '#6a7ba2' }}>contact@mitrabehboudi.com</a></li>
-                <li><strong>Phone:</strong> <a href="tel:0000000000" style={{ color: '#6a7ba2' }}>000-000-0000</a></li>
+                <li><strong>Email:</strong> <a href="mailto:contact@mitrabehboudi.com" style={{ color: 'var(--color-accent)' }}>contact@mitrabehboudi.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:0000000000" style={{ color: 'var(--color-accent)' }}>000-000-0000</a></li>
               </ul>
-              <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary mt-3" style={{ background: '#a7c7e7', border: 'none' }}>Book Now</a>
+              <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary mt-3">Book Now</a>
             </div>
             <div className="col-md-6 text-center">
               <FallbackImage src="https://www.svgrepo.com/show/303253/hand.svg" alt="Contact" style={{ maxWidth: 180 }} />
