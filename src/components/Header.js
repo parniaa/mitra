@@ -1,11 +1,12 @@
 import React from 'react';
 import FallbackImage from './FallbackImage';
+import { CALENDLY_URL } from '../config';
 
 
 const Header = () => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm" style={{maxHeight:75}}>
+  <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
     <div className="container">
-      <FallbackImage src="/mb.png" alt="Logo" style={{ width:75, margin: 18 }} />
+      <FallbackImage src="/mb.png" alt="Logo" style={{ maxWidth: '75px', height: 'auto', margin: '0 18px', display: 'block' }} />
       <a className="navbar-brand" href="#about">Mitra Behboudi</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -20,8 +21,10 @@ const Header = () => (
           <li className="nav-item"><a className="nav-link" href="#testimonials">Testimonials</a></li>
           <li className="nav-item"><a className="nav-link" href="#faq">FAQ</a></li>
           <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+          <li className="nav-item d-lg-none"><a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="nav-link btn btn-primary btn-sm" style={{marginTop: '0.5rem'}}>Book Consultation</a></li>
         </ul>
       </div>
+      <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary btn-sm d-none d-lg-inline-block" style={{marginLeft: '1rem'}}>Book Consultation</a>
     </div>
   </nav>
 );
