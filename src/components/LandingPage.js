@@ -40,9 +40,9 @@ const issues = [
   'Parenting', 'Career Challenges', 'Infidelity', 'Family Issues', 'Teen Challenges'
 ];
 
-const team = [
-  { name: 'Mitra Behboudi', title: 'Qualifying Registered psychotherapist', img: 'https://randomuser.me/api/portraits/women/65.jpg' },
-];
+// const team = [
+//   { name: 'Mitra Behboudi', title: 'Qualifying Registered psychotherapist', img: 'https://randomuser.me/api/portraits/women/65.jpg' },
+// ];
 
 const testimonials = [
   { text: 'Mitra helped me slow down, make sense of my anxiety, and feel in control again.', author: 'A., Toronto' },
