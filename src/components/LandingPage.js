@@ -92,7 +92,7 @@ const LandingPage = () => {
               <p>Therapy should feel safe, human, and truly helpful. I blend evidence‑based approaches with a down‑to‑earth style, helping you understand patterns, manage tough emotions, and make gentle, sustainable changes.</p>
             </div>
             <div className="col-md-6 text-center">
-              <FallbackImage src="/IMG3063.png" alt="Mountain" style={{ maxWidth: 500 }} />
+              <FallbackImage src="/IMG3063.png" alt="Mountain" className={styles.aboutImage} />
             </div>
           </div>
         </section>

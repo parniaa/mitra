@@ -1,6 +1,5 @@
 import React from 'react';
 import FallbackImage from './FallbackImage';
-import { CALENDLY_URL } from '../config';
 
 
 const Header = () => (
@@ -21,10 +20,8 @@ const Header = () => (
           <li className="nav-item"><a className="nav-link" href="#testimonials">Testimonials</a></li>
           <li className="nav-item"><a className="nav-link" href="#faq">FAQ</a></li>
           <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
-          <li className="nav-item d-lg-none"><a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="nav-link btn btn-primary btn-sm" style={{marginTop: '0.5rem'}}>Book Consultation</a></li>
         </ul>
       </div>
-      <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary btn-sm d-none d-lg-inline-block" style={{marginLeft: '1rem'}}>Book Consultation</a>
     </div>
   </nav>
 );

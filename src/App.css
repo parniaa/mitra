@@ -28,24 +28,6 @@
   color: #61dafb;
 }
 
-/* Compact navbar styling */
-.navbar {
-  padding: 0.5rem 0 !important;
-}
-
-.navbar .container {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.navbar-brand {
-  padding: 0.3rem 0 !important;
-}
-
-.nav-link {
-  padding: 0.4rem 1rem !important;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
