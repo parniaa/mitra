@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { SITE_URL } from '../config';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -6,6 +7,19 @@ const Contact = () => {
     e.preventDefault();
     setSubmitted(true);
   };
+  useEffect(() => {
+    document.title = 'Contact — Mitra Behboudi';
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', 'Contact Mitra Behboudi to book a consultation for psychotherapy and counseling in Toronto.');
+    let link = document.querySelector("link[rel='canonical']");
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
+    }
+    link.setAttribute('href', `${SITE_URL}/contact`);
+  }, []);
+
   return (
     <div className="container">
       <h2>Contact</h2>

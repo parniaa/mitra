@@ -6,11 +6,14 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { initAnalytics } from './analytics';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    {/* initialize analytics if REACT_APP_GA_ID is set */}
+    {typeof window !== 'undefined' && initAnalytics()}
   </React.StrictMode>
 );
 

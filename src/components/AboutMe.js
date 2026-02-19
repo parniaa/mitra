@@ -1,7 +1,23 @@
 import React from 'react';
 import FallbackImage from './FallbackImage';
+import { SITE_URL } from '../config';
+import { useEffect } from 'react';
 
-const AboutMe = () => (
+const AboutMe = () => {
+  useEffect(() => {
+    document.title = 'About — Mitra Behboudi';
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', 'Learn about Mitra Behboudi, a Qualifying Registered psychotherapist offering compassionate, client-centered psychotherapy in Toronto.');
+    let link = document.querySelector("link[rel='canonical']");
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
+    }
+    link.setAttribute('href', `${SITE_URL}/about`);
+  }, []);
+
+  return (
   <div className="container">
     <div className="row align-items-center">
       <div className="col-md-4 text-center mb-3 mb-md-0">

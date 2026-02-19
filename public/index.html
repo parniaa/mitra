@@ -4,19 +4,21 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Add Google Search Console verification code here: set content to the verification token -->
+    <meta name="google-site-verification" content="" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Therapy with Mitra Behboudi, RP. Compassionate, client-centered psychotherapy for individuals and couples in [City/Region]." />
-    <meta name="keywords" content="psychotherapist, psychotherapy, therapist, counseling, Mitra Behboudi, RP, mental health, couples therapy, individual therapy, CBT, EFT, mindfulness" />
+    <meta name="keywords" content="psychotherapist Toronto, psychotherapy Toronto, psychotherapist North York, psychotherapy North York, therapist Toronto, counseling Toronto, Mitra Behboudi, Registered Psychotherapist, CBT, EFT, mindfulness, روان‌درمانی تورنتو, روان درمانگر نورث یورک" />
     <meta name="author" content="Mitra Behboudi" />
-    <link rel="canonical" href="https://mitrabe.netlify.app/" />
+    <link rel="canonical" href="https://www.mitrabehboudi.com/" />
     <meta name="robots" content="index,follow" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Mitra Behboudi | Qualifying Registered psychotherapist" />
     <meta property="og:description" content="Compassionate, client-centered psychotherapy for individuals and couples." />
-    <meta property="og:url" content="https://mitrabe.netlify.app/" />
-    <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+    <meta property="og:url" content="https://www.mitrabehboudi.com/" />
+    <meta property="og:image" content="https://www.mitrabehboudi.com/logo512.png" />
     <meta property="og:site_name" content="Mitra Behboudi Psychotherapy" />
 
     <!-- Twitter Card -->
@@ -26,22 +28,34 @@
     <meta name="twitter:image" content="%PUBLIC_URL%/logo512.png" />
     
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/IMG3063.png" />
+    <!-- Performance: preconnect to external origins used by widgets/analytics -->
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Alternate language versions -->
+    <link rel="alternate" href="https://www.mitrabehboudi.com/" hreflang="en" />
+    <link rel="alternate" href="https://www.mitrabehboudi.com/fa" hreflang="fa" />
     
     <!-- JSON-LD Schema.org -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem","position": 1,"name": "Home","item": "https://www.mitrabehboudi.com/"},
+          {"@type": "ListItem","position": 2,"name": "Services","item": "https://www.mitrabehboudi.com/services"},
+          {"@type": "ListItem","position": 3,"name": "Contact","item": "https://www.mitrabehboudi.com/contact"}
+        ],
         "@type": "WebSite",
         "name": "Mitra Behboudi Psychotherapy",
-        "url": "https://mitrabe.netlify.app/",
+        "url": "https://www.mitrabehboudi.com/",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://mitrabe.netlify.app/?q={search_term_string}",
+          "target": "https://www.mitrabehboudi.com/?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }
@@ -51,9 +65,26 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Mitra Behboudi Psychotherapy",
-        "url": "https://mitrabe.netlify.app/",
+        "url": "https://www.mitrabehboudi.com/",
         "image": "%PUBLIC_URL%/logo512.png",
+        "telephone": "+1-647-864-7160",
         "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toronto",
+          "addressRegion": "Ontario",
+          "addressCountry": "CA"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Toronto"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "North York"
+          }
+        ],
         "sameAs": [
           "https://www.linkedin.com/in/example"
         ]
@@ -98,7 +129,7 @@
         "@type": "Person",
         "name": "Mitra Behboudi",
         "jobTitle": "Qualifying Registered psychotherapist",
-        "url": "https://mitrabe.netlify.app/",
+        "url": "https://www.mitrabehboudi.com/",
         "sameAs": [
           "https://www.linkedin.com/in/example",
           "https://www.psychologytoday.com/ca/therapists/example"

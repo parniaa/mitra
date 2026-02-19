@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import FallbackImage from './FallbackImage';
 import Header from './Header';
-import { CALENDLY_URL } from '../config';
+import { CALENDLY_URL, SITE_URL } from '../config';
 import styles from './LandingPage.module.css';
 
 function FadeInSection({ children }) {
@@ -59,8 +59,22 @@ const faqs = [
 ];
 
 const LandingPage = () => {
+  useEffect(() => {
+    document.title = 'Psychotherapist Toronto & North York | Mitra Behboudi';
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', 'Compassionate psychotherapy in Toronto and North York. Mitra Behboudi offers therapy for anxiety, couples counseling, and life transitions. Book a free consultation today.');
+    let link = document.querySelector("link[rel='canonical']");
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
+    }
+    link.setAttribute('href', `${SITE_URL}/`);
+  }, []);
+
   return (
     <div style={{ background: 'var(--color-bg-page)', fontFamily: 'Segoe UI, Arial, sans-serif' }}>
+      
       <Header />
       {/* Hero Section */}
       <FadeInSection>
@@ -72,9 +86,9 @@ const LandingPage = () => {
           }}
         >
           <FallbackImage src="/IMG3063.png" alt="Lotus" style={{ width: 280, marginBottom: 16, borderRadius: 100 }} />
-          <h1 className={styles.heroTitle}>Compassionate Psychotherapy and Art Therapy for Healing and Self-Rediscovery</h1>
+          <h1 className={styles.heroTitle}>Compassionate Psychotherapy in Toronto & North York — Anxiety, Couples Therapy & Life Transitions</h1>
           <p className={styles.heroSubtitle}>
-            I'm Mitra Behboudi, a Registered Psychotherapist(Qualifying) and a Registered Art Therapist, offering warm, practical support for anxiety, relationships, and life transitions—so you can reconnect with yourself and move forward with clarity, confidence, and calm.
+            I'm Mitra Behboudi, a Registered Psychotherapist(Qualifying) and a Registered Art Therapist in Toronto and North York, offering warm, practical support for anxiety, relationships, and life transitions—so you can reconnect with yourself and move forward with clarity, confidence, and calm.
           </p>
           <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className={`btn btn-primary btn-lg ${styles.heroBtn}`}>Book Free Consultation</a>
         </section>
@@ -202,7 +216,7 @@ const LandingPage = () => {
               <p>Book a free consultation or reach out with your questions. We're here to help you find balance and strength.</p>
               <ul className="list-unstyled">
                 <li><strong>Email:</strong> <a href="mailto:mitra.be@gmail.com" style={{ color: 'var(--color-accent)' }}>mitra.be@gmail.com</a></li>
-                <li><strong>Phone:</strong> <a href="tel:647-777-7777" style={{ color: 'var(--color-accent)' }}>647-777-7777</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+16478647160" style={{ color: 'var(--color-accent)' }}>+1 647-864-7160</a></li>
               </ul>
               <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary mt-3">Book Now</a>
             </div>
