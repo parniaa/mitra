@@ -196,7 +196,7 @@ const LandingPageFa = () => {
               <h2 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>آماده‌اید سفر خود را شروع کنید؟</h2>
               <p>مشاوره رایگان را رزرو کنید یا با سوالات خود تماس بگیرید. من اینجا هستم تا به شما کمک کنم تعادل و قدرت پیدا کنید.</p>
               <ul className="list-unstyled">
-                <li><strong>ایمیل:</strong> <a href="mailto:mitra.be@gmail.com" style={{ color: 'var(--color-accent)' }}>mitra.be@gmail.com</a></li>
+                <li><strong>ایمیل:</strong> <a href="mailto:mitratherapy@gmail.com" style={{ color: 'var(--color-accent)' }}>mitratherapy@gmail.com</a></li>
                 <li><strong>تلفن:</strong> <a href="tel:+16478647160" style={{ color: 'var(--color-accent)' }}>647-864-7160</a></li>
               </ul>
               <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary mt-3">هم‌اکنون رزرو کنید</a>

@@ -215,7 +215,7 @@ const LandingPage = () => {
               <h2 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>Ready to start your journey?</h2>
               <p>Book a free consultation or reach out with your questions. We're here to help you find balance and strength.</p>
               <ul className="list-unstyled">
-                <li><strong>Email:</strong> <a href="mailto:mitra.be@gmail.com" style={{ color: 'var(--color-accent)' }}>mitra.be@gmail.com</a></li>
+                <li><strong>Email:</strong> <a href="mailto:mitratherapy@gmail.com" style={{ color: 'var(--color-accent)' }}>mitratherapy@gmail.com</a></li>
                 <li><strong>Phone:</strong> <a href="tel:+16478647160" style={{ color: 'var(--color-accent)' }}>+1 647-864-7160</a></li>
               </ul>
               <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary mt-3">Book Now</a>
