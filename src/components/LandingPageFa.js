@@ -32,13 +32,13 @@ const therapies = [
 
 const issues = [
   'اضطراب', 'افسردگی', 'مشکلات رابطه‌ای', 'غم و سوگ', 'احترام به خود',
-  'والدین‌گری', 'چالش‌های شغلی', 'خیانت', 'مشکلات خانوادگی', 'چالش‌های نوجوانی'
+  'کمک به والدین', 'چالش‌های شغلی', 'خیانت', 'مشکلات خانوادگی', 'چالش‌های نوجوانی'
 ];
 
 const testimonials = [
   { text: 'میترا کمک کرد تا آرام شوم، اضطراب خود را درک کنم و کنترل داشته باشم.', author: 'الف، تورنتو' },
   { text: 'سرانجام احساس می‌کنم درک شده‌ام. جلسات ما ملایم اما عملی است.', author: 'س، نورث یورک' },
-  { text: 'ما بهتر ارتباط برقرار می‌کنیم و کمتر دعوا می‌کنیم. درمان واقعاً تغییر داد.', author: 'ج. و ر., زوج' },
+  { text: 'ما بهتر ارتباط برقرار می‌کنیم و کمتر دعوا می‌کنیم. درمان واقعاً تغییر داد.', author: 'ج و ر, زوج' },
 ];
 
 const faqs = [
@@ -55,7 +55,7 @@ const LandingPageFa = () => {
     document.documentElement.dir = 'rtl';
     document.title = 'روان‌درمانگر تورنتو و نورث یورک | میترا بهبودی';
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', 'روان‌درمانی حرفه‌ای در تورنتو و نورث یورک. میترا بهبودی درمان اضطراب، درمان زناشویی و انتقال زندگی ارائه می‌دهد. امروز برای مشاوره رایگان نزد خود را ثبت کنید.');
+    if (desc) desc.setAttribute('content', 'روان‌درمانی حرفه‌ای در تورنتو و نورث یورک. میترا بهبودی درمان اضطراب، درمان زناشویی و افسردگی ارائه می‌دهد. امروز برای مشاوره رایگان نزد خود را ثبت کنید.');
     let link = document.querySelector("link[rel='canonical']");
     if (!link) {
       link = document.createElement('link');
@@ -85,9 +85,9 @@ const LandingPageFa = () => {
           }}
         >
           <FallbackImage src="/IMG3063.png" alt="بنفشه" style={{ width: 280, marginBottom: 16, borderRadius: 100 }} />
-          <h1 className={styles.heroTitle}>روان‌درمانی حرفه‌ای در تورنتو و نورث یورک — اضطراب، درمان زناشویی و انتقال زندگی</h1>
+          <h1 className={styles.heroTitle}>روان‌درمانی حرفه‌ای در تورنتو و نورث یورک — اضطراب، درمان زناشویی و افسردگی</h1>
           <p className={styles.heroSubtitle}>
-            من میترا بهبودی هستم، یک روان‌درمانگر واجد شرایط و هنرمند درمانگر در تورنتو و نورث یورک، که حمایت گرم و عملی برای اضطراب، روابط و انتقال‌های زندگی ارائه می‌دهم—تا بتوانید دوباره با خود ارتباط برقرار کنید و با وضوح، اعتماد و آرامش پیش بروید.
+            من میترا بهبودی هستم، روان‌درمانگر و هنر درمانگر در تورنتو و نورث یورک، که حمایت گرم و عملی برای اضطراب، روابط و انتقال‌های زندگی ارائه می‌دهم—تا بتوانید دوباره با خود ارتباط برقرار کنید و با وضوح، اعتماد و آرامش پیش بروید.
           </p>
           <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className={`btn btn-primary btn-lg ${styles.heroBtn}`}>مشاوره رایگان را رزرو کنید</a>
         </section>
@@ -101,7 +101,7 @@ const LandingPageFa = () => {
         <section className={`container ${styles.section}`}>
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
-              <h2 className={styles.sectionTitle}>درمانی که جایی است که شما هستید</h2>
+              <h2 className={styles.sectionTitle}>درمانی امن که شما به آن احتیاج دارید</h2>
               <p>درمان باید ایمن، انسانی و واقعاً مفید باشد. من روش‌های مبتنی بر شواهد را با سبکی صادق و درمان می‌کنم، کمک می‌کنم تا الگوها را درک کنید، احساسات سخت را مدیریت کنید و تغییرات ملایم و پایدار انجام دهید.</p>
             </div>
             <div className="col-md-6 text-center">
@@ -193,11 +193,11 @@ const LandingPageFa = () => {
         <section className={`container ${styles.contactSection}`} id="contact">
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
-              <h2 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>آماده‌اید سفر خود را شروع کنید?</h2>
-              <p>مشاوره رایگان را رزرو کنید یا با سوالات خود تماس بگیرید. ما اینجا هستیم تا به شما کمک کنیم تعادل و قدرت پیدا کنید.</p>
+              <h2 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>آماده‌اید سفر خود را شروع کنید؟</h2>
+              <p>مشاوره رایگان را رزرو کنید یا با سوالات خود تماس بگیرید. من اینجا هستم تا به شما کمک کنم تعادل و قدرت پیدا کنید.</p>
               <ul className="list-unstyled">
                 <li><strong>ایمیل:</strong> <a href="mailto:mitra.be@gmail.com" style={{ color: 'var(--color-accent)' }}>mitra.be@gmail.com</a></li>
-                <li><strong>تلفن:</strong> <a href="tel:+16478647160" style={{ color: 'var(--color-accent)' }}>+1 647-864-7160</a></li>
+                <li><strong>تلفن:</strong> <a href="tel:+16478647160" style={{ color: 'var(--color-accent)' }}>647-864-7160</a></li>
               </ul>
               <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className="btn btn-primary mt-3">هم‌اکنون رزرو کنید</a>
             </div>
