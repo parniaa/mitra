@@ -71,7 +71,7 @@ netlify deploy --prod --dir=build
 cp .env.example .env
 
 # 3. Add your GA ID to .env
-echo "REACT_APP_GA_ID=G-XXXXXXXXXX" >> .env
+echo "REACT_APP_GA_ID=G-B6JHGYKW47" >> .env
 
 # 4. Rebuild and deploy
 npm run build
@@ -182,7 +182,7 @@ Required/Optional variables:
 SITE_URL=https://www.mitrabehboudi.com
 
 # Optional (set for analytics)
-REACT_APP_GA_ID=G-XXXXXXXXXX
+REACT_APP_GA_ID=G-B6JHGYKW47
 
 # For GSC verification (optional, use meta tag in index.html if needed)
 REACT_APP_GSC_TOKEN=your_verification_token_here

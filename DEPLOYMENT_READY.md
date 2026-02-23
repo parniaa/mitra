@@ -65,7 +65,7 @@ npm run build
 cp .env.example .env
 
 # Add your GA4 Measurement ID (from https://analytics.google.com)
-# REACT_APP_GA_ID=G-XXXXXXXXXX
+# REACT_APP_GA_ID=G-B6JHGYKW47
 
 npm run build  # rebuild with analytics enabled
 ```
