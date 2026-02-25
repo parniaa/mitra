@@ -7,7 +7,7 @@
     <!-- Add Google Search Console verification code here: set content to the verification token -->
     <meta name="google-site-verification" content="" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Therapy with Mitra Behboudi, RP. Compassionate, client-centered psychotherapy for individuals and couples in Toronto Ontario." />
+    <meta name="description" content="Compassionate, client-centered psychotherapy in Toronto & North York. Anxiety, couples therapy, and life-transition support. Free 15-minute consultation—book online." />
     <meta name="keywords" content="psychotherapist Toronto, psychotherapy Toronto, psychotherapist North York, psychotherapy North York, therapist Toronto, counseling Toronto, Mitra Behboudi, Registered Psychotherapist, CBT, EFT, mindfulness, روان‌درمانی تورنتو, روان درمانگر نورث یورک" />
     <meta name="author" content="Mitra Behboudi" />
     <link rel="canonical" href="https://www.mitrabehboudi.com/" />
@@ -66,27 +66,37 @@
         "@type": "LocalBusiness",
         "name": "Mitra Behboudi Psychotherapy",
         "url": "https://www.mitrabehboudi.com/",
-        "image": "%PUBLIC_URL%/logo512.png",
+        "logo": "https://www.mitrabehboudi.com/mb.png",
+        "image": ["https://www.mitrabehboudi.com/IMG3063.png"],
         "telephone": "+1-647-864-7160",
-        "priceRange": "$$$",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "5200 yonge st ",
           "addressLocality": "Toronto",
           "addressRegion": "Ontario",
+          "postalCode": "M2L 2G6",
           "addressCountry": "CA"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.6532,
+          "longitude": -79.3832
+        },
         "areaServed": [
-          {
-            "@type": "AdministrativeArea",
-            "name": "Toronto"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "North York"
-          }
+          { "@type": "AdministrativeArea", "name": "Toronto" },
+          { "@type": "AdministrativeArea", "name": "North York" }
+        ],
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" }
         ],
         "sameAs": [
-          "https://www.linkedin.com/in/example"
+          "https://www.linkedin.com/in/example",
+          "https://www.psychologytoday.com/ca/therapists/example"
+        ],
+        "makesOffer": [
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Individual Therapy","description":"Evidence-based therapy for anxiety, depression, and life transitions."}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Couples Therapy","description":"Emotion-focused and practical therapy for relationship issues."}}
         ]
       }
     </script>
@@ -145,7 +155,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Mitra Behboudi | Qualifying Registered psychotherapist</title>
+    <title>Mitra Behboudi — Psychotherapist in Toronto & North York</title>
   </head>
   <body>
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />

@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const SITE_URL = process.env.SITE_URL || 'https://www.mitrabehboudi.com';
-const routes = ['/', '/fa'];
+// Add important public routes so sitemap includes location and service pages
+const routes = ['/', '/fa', '/services', '/contact', '/toronto'];
 
 const buildUrl = (route) => `${SITE_URL.replace(/\/$/, '')}${route}`;
 
