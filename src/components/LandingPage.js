@@ -81,8 +81,9 @@ const LandingPage = () => {
         <section
           className={styles.hero}
           style={{
-            backgroundColor: 'teal',
-            backgroundPosition: 'center top',
+            backgroundImage: 'url(/hero1.jpg)',
+            backgroundPosition: 'center center',
+            backgroundSize: 'cover',
           }}
         >
           <FallbackImage src="/IMG3063.png" alt="Lotus" style={{ width: 280, marginBottom: 16, borderRadius: 100 }} />
