@@ -81,30 +81,33 @@ const LandingPage = () => {
         <section
           className={styles.hero}
           style={{
-            backgroundImage: 'url(/hero1.jpg)',
-            backgroundPosition: 'center center',
+            backgroundImage: 'url(/hero.jpg)',
+            backgroundPosition: 'center',
             backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
           }}
         >
-          <FallbackImage src="/IMG3063.png" alt="Lotus" style={{ width: 280, marginBottom: 16, borderRadius: 100 }} />
-          <h1 className={styles.heroTitle}>Compassionate Psychotherapy in Toronto & North York — Anxiety, Couples Therapy & Life Transitions</h1>
-          <p className={styles.heroSubtitle}>
-            I'm Mitra Behboudi, a Registered Psychotherapist(Qualifying) and a Registered Art Therapist in Toronto and North York, offering warm, practical support for anxiety, relationships, and life transitions—so you can reconnect with yourself and move forward with clarity, confidence, and calm.
-          </p>
-          <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className={`btn btn-primary btn-lg ${styles.heroBtn}`}>Book Free Consultation</a>
+          {/* <FallbackImage src="/IMG3063.png" alt="Lotus" style={{ width: 280, marginBottom: 16, borderRadius: 100,}} /> */}
+          <div className={styles.overlay}>
+            <h1 className={styles.heroTitle}>Psychotherapy & Art Therapy for Anxiety, Trauma, and Life Transitions</h1>
+            <p className={styles.heroSubtitle}>
+              In the Light of Awareness and Compassion, the Self Begins to Heal
+            </p>
+            <a href={CALENDLY_URL} target="_blank" rel="noreferrer" onClick={(e)=>{ if(window.Calendly){ e.preventDefault(); window.Calendly.initPopupWidget({url: CALENDLY_URL}); } }} className={`btn btn-primary btn-lg ${styles.heroBtn}`}>Book Free Consultation</a>
+          </div>
         </section>
       </FadeInSection>
 
       {/* About/Values Section */}
       <FadeInSection>
         <div id="about" style={{textAlign: 'center', paddingTop: '2rem'}}>
-          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>About</h3>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>About Me</h3>
         </div>
         <section className={`container ${styles.section}`}>
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
               <h2 className={styles.sectionTitle}>Care that Meets You Where You Are</h2>
-              <p>Therapy should feel safe, human, and truly helpful. I blend evidence‑based approaches with a down‑to‑earth style, helping you understand patterns, manage tough emotions, and make gentle, sustainable changes.</p>
+              <p>I am a Registered Psychotherapist (Qualifying) with the College of Registered Psychotherapists of Ontario (CRPO) and an Art Therapist trained through the Canadian Art Therapy Association (CATA). I provide culturally sensitive, trauma-informed psychotherapy to adults, youth, and families navigating anxiety, depression, trauma, identity concerns, and life transitions.</p>
             </div>
             <div className="col-md-6 text-center">
               <FallbackImage src="/IMG3063.png" alt="Mountain" className={styles.aboutImage} />
