@@ -100,14 +100,18 @@ const LandingPage = () => {
 
       {/* About/Values Section */}
       <FadeInSection>
-        <div id="about" style={{textAlign: 'center', paddingTop: '2rem'}}>
+        <div id="about" style={{textAlign: 'center'}}>
           <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>About Me</h3>
         </div>
         <section className={`container ${styles.section}`}>
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
-              <h2 className={styles.sectionTitle}>Care that Meets You Where You Are</h2>
+              {/* <h2 className={styles.sectionTitle}>Care that Meets You Where You Are</h2> */}
               <p>I am a Registered Psychotherapist (Qualifying) with the College of Registered Psychotherapists of Ontario (CRPO) and an Art Therapist trained through the Canadian Art Therapy Association (CATA). I provide culturally sensitive, trauma-informed psychotherapy to adults, youth, and families navigating anxiety, depression, trauma, identity concerns, and life transitions.</p>
+              <p>My approach is collaborative, compassionate, and client-centered. I strive to create a safe, respectful, and non-judgmental space where you can explore your experiences, process emotions, and move toward meaningful growth and healing.</p>      
+              <p>When appropriate, I integrate creative and expressive processes to support clients in accessing emotions and insights that may be difficult to express through words alone.</p>      
+              <p>I offer therapy in English and Persian and am committed to culturally attuned care that honours each individual’s story and lived experience.</p>      
+            
             </div>
             <div className="col-md-6 text-center">
               <FallbackImage src="/IMG3063.png" alt="Mountain" className={styles.aboutImage} />
