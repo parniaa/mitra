@@ -26,6 +26,7 @@ const Header = () => {
           </li>
           
           <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
+          <li className="nav-item"><a className="nav-link" href="#expertise">Expertise</a></li>
           <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
           <li className="nav-item"><a className="nav-link" href="#issues">Issues</a></li>
           {/* <li className="nav-item"><a className="nav-link" href="#team">Team</a></li> */}

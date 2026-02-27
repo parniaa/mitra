@@ -26,13 +26,8 @@ const therapies = [
   { title: 'Couple Therapy', desc: 'Strengthen your relationship and rebuild intimacy.' },
   { title: 'Family Therapy', desc: 'Improve communication and resolve conflicts.' },
   { title: 'Adolescent Therapy', desc: 'Support for teens facing emotional and social challenges.' },
-  { title: 'Marriage Therapy', desc: 'Address challenges and cultivate a positive connection.' },
   { title: 'Relationship Therapy', desc: 'Guidance for navigating relationship challenges.' },
-  { title: 'Premarital Therapy', desc: 'Build a strong foundation for your future.' },
   { title: 'Child Therapy', desc: 'Support your child\'s emotional and mental well-being.' },
-  { title: 'CBT', desc: 'Manage anxiety, depression, and more with CBT.' },
-  { title: 'Emotion Focused Therapy', desc: 'Achieve emotional healing and growth.' },
-  { title: 'Solution Focused Therapy', desc: 'Identify solutions and achieve your goals.' },
 ];
 
 const issues = [
@@ -45,9 +40,14 @@ const issues = [
 // ];
 
 const testimonials = [
-  { text: 'Mitra helped me slow down, make sense of my anxiety, and feel in control again.', author: 'A., Toronto' },
-  { text: 'I finally feel understood. Our sessions are gentle but practical—I leave with clarity.', author: 'S., North York' },
+  { text: 'Mitra helped me slow down, make sense of my anxiety, and feel in control again. I do recommend her', author: 'A., Toronto' },
+  { text: 'I finally feel understood. Our sessions are gentle but very practical. I leave with expected clarity.', author: 'S., North York' },
   { text: 'We communicate better and fight less. Therapy with Mitra truly changed our relationship.', author: 'J. & R., Couple' },
+];
+const expertise = [
+  { text: 'I offer collaborative, trauma-informed, and culturally sensitive psychotherapy grounded in a client-centered and strengths-based framework. My work integrates CBT, DBT, IFS, ACT, mindfulness-based practices, and Art Therapy to support emotional awareness, regulation, and meaningful growth within a compassionate and safe therapeutic space.', title: 'My Approach' },
+  { text: 'With over six years of experience in mental health and rehabilitation settings, I have supported individuals living with acquired brain injuries, as well as refugees and newcomers navigating complex life transitions.I work with adults, youth, and families facing anxiety, depression, trauma, grief, identity concerns, and relationship challenges.Registered', title: 'My Experience' },
+  { text: 'I believe healing begins with awareness, the light that reveals what has always lived within us. What we search for in the world is often already present inside, waiting to be seen with compassion. Through mindful reflection and gentle understanding, we rediscover the strength, wisdom, and resilience that were never truly lost. Therapy is a space to turn inward, to soften, and to remember who you are beneath the noise of pain and expectation.', title: 'My Beleif' },
 ];
 
 const faqs = [
@@ -100,7 +100,7 @@ const LandingPage = () => {
 
       {/* About/Values Section */}
       <FadeInSection>
-        <div id="about" style={{textAlign: 'center'}}>
+        <div id="about" style={{textAlign: 'center', marginTop: '1rem'}}>
           <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>About Me</h3>
         </div>
         <section className={`container ${styles.section}`}>
@@ -116,6 +116,23 @@ const LandingPage = () => {
             <div className="col-md-6 text-center">
               <FallbackImage src="/IMG3063.png" alt="Mountain" className={styles.aboutImage} />
             </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Expertise Section */}
+      <FadeInSection>
+        <div id="expertise" style={{textAlign: 'center', paddingTop: '2rem'}}>
+          <h3 style={{color: 'var(--color-primary-strong)', letterSpacing: 2, fontWeight: 700}}>Expertise</h3>
+        </div>
+        <section className={`container ${styles.section}`}>
+          <div className={styles.expertiseGrid}>
+            {expertise.map((t, i) => (
+              <div className={styles.expertiseCard} key={i}>
+                <h5 style={{ color: 'var(--color-primary-strong)', fontWeight: 600 }}>{t.title}</h5>
+                <p style={{ color: 'var(--color-text-main)' }}>{t.text}</p>
+              </div>
+            ))}
           </div>
         </section>
       </FadeInSection>

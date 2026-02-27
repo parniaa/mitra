@@ -1,5 +1,5 @@
 .hero {
-  padding: 1.25rem 1.5rem 3.25rem;
+  padding: 12rem;
   text-align: center;
   border-radius: 0 0 32px 32px;
   box-shadow: var(--shadow-soft);
@@ -31,7 +31,7 @@
 .heroContent {
   max-width: 720px;
   margin: 0 auto;
-  padding: 1.75rem 1.5rem 2rem;
+  padding: 6rem;
   background: rgba(248, 250, 252, 0.92);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -43,7 +43,7 @@
   color: #1f2933;
   font-weight: 700;
   letter-spacing: -0.04em;
-  font-size: 24px;
+  font-size: 34px;
   text-shadow: 0 1px 2px rgba(15, 23, 42, 0.35);
 }
 
@@ -79,6 +79,8 @@
 .serviceCard {
   background: radial-gradient(circle at top left, rgba(245, 158, 11, 0.10), transparent 60%),
               var(--color-bg-elevated);
+  background-image: url(/public/tilebg.JPG);
+  background-size: cover;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-subtle);
   box-shadow: var(--shadow-subtle);
@@ -170,6 +172,32 @@
   margin-bottom: 1.15rem;
 }
 
+.expertiseGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.expertiseCard {
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.08), transparent 55%),
+              var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-subtle);
+  padding: 2.1rem 1.9rem;
+  max-width: 22rem;
+  text-align: justify;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.expsetiselCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14);
+}
+
 .testimonialsGrid {
   display: flex;
   flex-wrap: wrap;
@@ -180,6 +208,10 @@
 .testimonialCard {
   background: radial-gradient(circle at top, rgba(59, 130, 246, 0.08), transparent 55%),
               var(--color-bg-elevated);
+  background-image: url(/public/tilebg.JPG);
+  background-size: cover;
+  background-position: center;
+  /* padding: 60px 40px; */
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-subtle);
   box-shadow: var(--shadow-subtle);
@@ -220,6 +252,7 @@
   max-width: 500px;
   width: 100%;
   height: auto;
+  border-radius: 16px;
 }
 
 @media (max-width: 600px) {
