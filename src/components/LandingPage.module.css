@@ -248,6 +248,31 @@
   margin-top: 2.5rem;
 }
 
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 0.8rem 0;
+}
+
+.socialLink {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #f9fafb;
+  text-decoration: none;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.socialLink:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .aboutImage {
   max-width: 500px;
   width: 100%;
@@ -257,7 +282,11 @@
 
 @media (max-width: 600px) {
   .hero {
-    padding-inline: 1.2rem;
+    padding: 5rem 1.2rem;
+  }
+
+  .overlay {
+    margin-top: 1rem;
   }
 
   .heroTitle {
